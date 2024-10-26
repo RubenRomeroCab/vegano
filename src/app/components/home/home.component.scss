@@ -1,0 +1,77 @@
+@use "../../../base/variables" as v;
+@use "../../../base/mixin" as m;
+
+p {
+  text-align: center;
+  font-size: 60px;
+  color: black;
+  font-family: v.$fuente_principal;
+}
+
+h3,
+h1 {
+  color: black;
+  margin-bottom: 20px; /* Agregar espacio entre el título y el resto */
+  font-size: 3rem;
+  text-align: center;
+}
+
+
+.menus {
+  display: grid; /* Cambiado de grid a flex */
+  grid-template-columns: repeat(2, 1fr); /* Apilar en vertical */
+  align-items: center; /* Centrar horizontalmente */
+
+  @include m.tablet {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    img {
+      width: 330px;
+    }
+  }
+
+  ul {
+    text-align: center;
+    list-style: none;
+    margin: 0; /* Eliminar margen predeterminado */
+    padding: 0; /* Eliminar padding predeterminado */
+    font-size: 1.4rem;
+    font-family: v.$fuentetexto;
+  }
+
+  .img-center {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px; /* Espacio opcional entre la imagen y la lista */
+  }
+}
+
+img {
+  width: 450px; /* O puedes usar un valor específico como 300px */
+}
+
+.contenedor-flex {
+  display: flex;
+  justify-content: center; /* Centra el contenido horizontalmente */
+  align-items: center; /* Centra verticalmente */
+  /* Opcional: para centrarlo en toda la pantalla */
+}
+
+.btn {
+  margin-top: 40px;
+  padding: 1rem;
+  background-color:v.$colorbtn;
+  text-decoration: none;
+  color: white;
+  width: 300px;
+  text-align: center;
+  font-size: 40px;
+  border-radius: 15px;
+}
+
+.btn:hover {
+ 
+  color: v.$colorHover;
+  cursor: pointer;
+}

@@ -1,0 +1,33 @@
+@use "../../../base/variables" as v;
+@use "../../../base/mixin" as m;
+
+nav {
+  background-color: v.$colornav;
+  display: flex; /* Utiliza Flexbox */
+  justify-content: space-between;
+  align-items: center; /* Centra los elementos verticalmente */
+  
+  
+  @include m.tablet {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  img{
+    width: 80px;
+  }
+}
+
+a {
+  color: v.$colortext;
+  text-decoration: none;
+  font-size: 45px;
+  justify-content: center;
+  &:hover {
+    color: v.$colorHover;
+  }
+}
+
+nav a:last-child {
+  margin-right: 20px; // Ajusta el valor según necesites
+}

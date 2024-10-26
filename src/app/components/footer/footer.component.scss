@@ -1,0 +1,29 @@
+@use '../../../base/variables' as v;
+
+p{
+    font-family: v.$fuente_principal;
+    text-align: center;
+    color: v.$colortext;
+    margin-top: 2rem;
+    font-size: 2rem;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    font-size: 2rem;
+    
+}
+a{
+    text-decoration: none;
+    color: v.$colortext;
+    margin-top: 1rem;
+   
+}
+
+footer{
+    background-color: v.$colornav;
+    max-width: 100%;
+}
+
+
